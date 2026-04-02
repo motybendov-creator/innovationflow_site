@@ -44,14 +44,14 @@ export default function ServicesSection() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="group relative rounded-xl border border-border bg-card hover:bg-muted/30 hover:border-secondary/30 transition-all duration-300 overflow-hidden"
             >
-              <div className="h-36 overflow-hidden">
+              <div className="h-36 overflow-hidden relative">
                 <img
                   src={s.img}
                   alt={t(`${s.key}.title`)}
                   loading="lazy"
                   width={640}
                   height={512}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 brightness-125"
                 />
               </div>
               <div className="p-6">
