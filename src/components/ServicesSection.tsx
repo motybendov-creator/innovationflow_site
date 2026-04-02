@@ -1,14 +1,20 @@
 import { useI18n } from "@/lib/i18n";
 import { motion } from "framer-motion";
 import { Target, Coins, Handshake, Megaphone, Rocket, Building2 } from "lucide-react";
+import serviceStrategy from "@/assets/service-strategy.jpg";
+import serviceFunding from "@/assets/service-funding.jpg";
+import serviceBizdev from "@/assets/service-bizdev.jpg";
+import serviceMarketing from "@/assets/service-marketing.jpg";
+import serviceDeployment from "@/assets/service-deployment.jpg";
+import serviceSoftlanding from "@/assets/service-softlanding.jpg";
 
 const services = [
-  { key: "s1", icon: Target },
-  { key: "s2", icon: Coins },
-  { key: "s3", icon: Handshake },
-  { key: "s4", icon: Megaphone },
-  { key: "s5", icon: Rocket },
-  { key: "s6", icon: Building2 },
+  { key: "s1", icon: Target, img: serviceStrategy },
+  { key: "s2", icon: Coins, img: serviceFunding },
+  { key: "s3", icon: Handshake, img: serviceBizdev },
+  { key: "s4", icon: Megaphone, img: serviceMarketing },
+  { key: "s5", icon: Rocket, img: serviceDeployment },
+  { key: "s6", icon: Building2, img: serviceSoftlanding },
 ];
 
 export default function ServicesSection() {
@@ -36,13 +42,25 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-30px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative rounded-xl border border-border bg-card p-6 hover:bg-muted/30 hover:border-secondary/30 transition-all duration-300"
+              className="group relative rounded-xl border border-border bg-card hover:bg-muted/30 hover:border-secondary/30 transition-all duration-300 overflow-hidden"
             >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-secondary/10 group-hover:text-secondary transition-colors">
-                <s.icon className="w-5 h-5" />
+              <div className="h-36 overflow-hidden">
+                <img
+                  src={s.img}
+                  alt={t(`${s.key}.title`)}
+                  loading="lazy"
+                  width={640}
+                  height={512}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <h3 className="font-display text-lg font-semibold mb-2">{t(`${s.key}.title`)}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{t(`${s.key}.desc`)}</p>
+              <div className="p-6">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-secondary/10 group-hover:text-secondary transition-colors">
+                  <s.icon className="w-5 h-5" />
+                </div>
+                <h3 className="font-display text-lg font-semibold mb-2">{t(`${s.key}.title`)}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{t(`${s.key}.desc`)}</p>
+              </div>
             </motion.div>
           ))}
         </div>
