@@ -21,8 +21,8 @@ export default function BridgeCanvas() {
 
     let animId: number;
     const particles: Particle[] = [];
-    const blue = "56, 100, 184";
-    const gold = "252, 209, 22";
+    const blue = "20, 120, 160";
+    const gold = "50, 160, 80";
 
     const resize = () => {
       canvas.width = window.innerWidth;
