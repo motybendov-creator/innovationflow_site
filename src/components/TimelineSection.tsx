@@ -12,7 +12,7 @@ export default function TimelineSection() {
 
   return (
     <section id="how-it-works" className="py-24 md:py-32 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/10 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-accent/5 to-secondary/5" />
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

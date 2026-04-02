@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useI18n } from "@/lib/i18n";
 import { motion } from "framer-motion";
-import logo from "@/assets/logo.jpeg";
+import logoIcon from "@/assets/logo-icon.png";
 
 const navItems = [
   { key: "nav.about", href: "#about" },
@@ -31,8 +31,12 @@ export default function Header() {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 px-4 md:px-6">
-        <a href="#" className="flex items-center">
-          <img src={logo} alt="InnovationFlow" className="h-10" />
+        <a href="#" className="flex items-center gap-2">
+          <img src={logoIcon} alt="InnovationFlow" className="h-10 w-10 object-contain" />
+          <div className="flex flex-col leading-none">
+            <span className="font-display text-base font-bold text-foreground tracking-tight">InnovationFlow</span>
+            <span className="text-[10px] text-muted-foreground tracking-wider uppercase">Bridging Israel & Romania</span>
+          </div>
         </a>
 
         {/* Desktop nav */}

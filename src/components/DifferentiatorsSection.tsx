@@ -13,7 +13,7 @@ export default function DifferentiatorsSection() {
   const { t } = useI18n();
 
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-24 md:py-32 bg-gradient-to-br from-background via-primary/5 to-secondary/5">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
