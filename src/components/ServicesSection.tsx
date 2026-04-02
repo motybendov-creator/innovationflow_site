@@ -1,7 +1,7 @@
 import { useI18n } from "@/lib/i18n";
 import { motion } from "framer-motion";
 import { Target, Coins, Handshake, Megaphone, Rocket, Building2 } from "lucide-react";
-import serviceStrategy from "@/assets/service-strategy-new.png";
+import serviceStrategy from "@/assets/service-strategy-new.webp";
 import serviceFunding from "@/assets/service-funding.jpg";
 import serviceBizdev from "@/assets/service-bizdev.jpg";
 import serviceMarketing from "@/assets/service-marketing.jpg";
