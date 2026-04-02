@@ -35,7 +35,7 @@ export default function Header() {
           <img src={logoIcon} alt="InnovationFlow" className="h-10 w-10 object-contain" />
           <div className="flex flex-col leading-none">
             <span className="font-display text-base font-bold text-foreground tracking-tight">InnovationFlow</span>
-            <span className="text-[10px] text-muted-foreground tracking-wider uppercase">Bridging Israel & Romania</span>
+            <span className="text-[10px] text-muted-foreground tracking-wider uppercase">Bridging Israel & Romania to europe</span>
           </div>
         </a>
 
