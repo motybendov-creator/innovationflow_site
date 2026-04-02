@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useI18n } from "@/lib/i18n";
 import { motion } from "framer-motion";
-import logoIcon from "@/assets/logo-icon.png";
+import logoIcon from "@/assets/innovation-logo.png";
 
 const navItems = [
   { key: "nav.about", href: "#about" },
