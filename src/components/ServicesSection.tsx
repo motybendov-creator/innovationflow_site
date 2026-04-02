@@ -2,11 +2,11 @@ import { useI18n } from "@/lib/i18n";
 import { motion } from "framer-motion";
 import { Target, Coins, Handshake, Megaphone, Rocket, Building2 } from "lucide-react";
 import serviceStrategy from "@/assets/service-strategy-new.webp";
-import serviceFunding from "@/assets/service-funding.jpg";
-import serviceBizdev from "@/assets/service-bizdev.jpg";
-import serviceMarketing from "@/assets/service-marketing.jpg";
-import serviceDeployment from "@/assets/service-deployment.jpg";
-import serviceSoftlanding from "@/assets/service-softlanding.jpg";
+import serviceFunding from "@/assets/service-funding.webp";
+import serviceBizdev from "@/assets/service-bizdev.webp";
+import serviceMarketing from "@/assets/service-marketing.webp";
+import serviceDeployment from "@/assets/service-deployment.webp";
+import serviceSoftlanding from "@/assets/service-softlanding.webp";
 
 const services = [
   { key: "s1", icon: Target, img: serviceStrategy },
