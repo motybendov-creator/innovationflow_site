@@ -15,7 +15,7 @@ export default function ServicesSection() {
   const { t } = useI18n();
 
   return (
-    <section id="services" className="py-24 md:py-32 relative">
+    <section id="services" className="py-24 md:py-32 relative bg-gradient-to-br from-secondary/5 via-background to-primary/5">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
