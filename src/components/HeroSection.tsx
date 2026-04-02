@@ -14,7 +14,7 @@ export default function HeroSection() {
         style={{
           backgroundSize: "400% 400%",
           backgroundImage:
-            "radial-gradient(ellipse at 20% 50%, hsl(222 100% 36% / 0.3) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, hsl(45 97% 54% / 0.15) 0%, transparent 50%), linear-gradient(180deg, hsl(220 30% 6%) 0%, hsl(220 25% 10%) 100%)",
+            "radial-gradient(ellipse at 20% 50%, hsl(195 80% 35% / 0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, hsl(145 60% 40% / 0.1) 0%, transparent 50%), linear-gradient(180deg, hsl(200 30% 95%) 0%, hsl(200 25% 90%) 100%)",
         }}
       />
 
