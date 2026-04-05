@@ -1,8 +1,8 @@
 import { useI18n } from "@/lib/i18n";
 import { motion } from "framer-motion";
 import { Globe, Cpu } from "lucide-react";
-import israelTechImg from "@/assets/israel-tech.jpg";
-import romaniaEuImg from "@/assets/romania-eu.jpg";
+import israelTechImg from "@/assets/israel-tech.webp";
+import romaniaEuImg from "@/assets/romania-eu.webp";
 
 export default function AboutSection() {
   const { t } = useI18n();
