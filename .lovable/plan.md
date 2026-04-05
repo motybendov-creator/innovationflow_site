@@ -1,18 +1,18 @@
 
 
-## Compress About Section Images to WebP
+## Contact Form → mailto Link
 
-The `romania-eu.jpg` is 2.1MB — very large. `israel-tech.jpg` is already small at 60KB but can still benefit from WebP conversion.
+Replace the current no-op form with a `mailto:` link that opens the user's email client with pre-filled subject and body from the form fields, plus a toast confirming the action.
 
-### Steps
+### Changes
 
-1. **Convert both images to WebP** (640px width, quality 80) using `cwebp`:
-   - `src/assets/israel-tech.jpg` → `src/assets/israel-tech.webp`
-   - `src/assets/romania-eu.jpg` → `src/assets/romania-eu.webp`
+**`src/components/ContactSection.tsx`**:
+- Add `useState` for name, email, company, message fields
+- On submit, construct a `mailto:INFO@innovationflow.ro` link with subject and body containing the form data
+- Open it via `window.location.href`
+- Show a toast: "Your email client has been opened. We will contact you shortly."
+- Clear the form
 
-2. **Update imports in `src/components/AboutSection.tsx`**:
-   - Change `import israelTechImg from "@/assets/israel-tech.jpg"` → `.webp`
-   - Change `import romaniaEuImg from "@/assets/romania-eu.jpg"` → `.webp`
-
-This follows the same pattern used for the service images and should dramatically reduce load time, especially for the 2.1MB romania-eu image.
+**`src/lib/i18n.tsx`**:
+- Add translations for `contact.success` (en/ro)
 
