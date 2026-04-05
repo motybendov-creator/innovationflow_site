@@ -1,12 +1,30 @@
+import { useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Send } from "lucide-react";
+import { toast } from "sonner";
 
 export default function ContactSection() {
   const { t } = useI18n();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Inquiry from ${name}${company ? ` (${company})` : ""}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\n${message}`);
+    window.location.href = `mailto:INFO@innovationflow.ro?subject=${subject}&body=${body}`;
+    toast.success(t("contact.success"));
+    setName("");
+    setEmail("");
+    setCompany("");
+    setMessage("");
+  };
 
   return (
     <section id="contact" className="py-24 md:py-32 relative">
@@ -29,14 +47,14 @@ export default function ContactSection() {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-lg mx-auto space-y-4"
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={handleSubmit}
         >
           <div className="grid sm:grid-cols-2 gap-4">
-            <Input placeholder={t("contact.name")} className="bg-muted/50 border-border" />
-            <Input type="email" placeholder={t("contact.email")} className="bg-muted/50 border-border" />
+            <Input placeholder={t("contact.name")} className="bg-muted/50 border-border" value={name} onChange={(e) => setName(e.target.value)} required />
+            <Input type="email" placeholder={t("contact.email")} className="bg-muted/50 border-border" value={email} onChange={(e) => setEmail(e.target.value)} required />
           </div>
-          <Input placeholder={t("contact.company")} className="bg-muted/50 border-border" />
-          <Textarea placeholder={t("contact.message")} rows={4} className="bg-muted/50 border-border resize-none" />
+          <Input placeholder={t("contact.company")} className="bg-muted/50 border-border" value={company} onChange={(e) => setCompany(e.target.value)} />
+          <Textarea placeholder={t("contact.message")} rows={4} className="bg-muted/50 border-border resize-none" value={message} onChange={(e) => setMessage(e.target.value)} required />
           <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold gap-2">
             {t("contact.send")}
             <Send className="w-4 h-4" />
