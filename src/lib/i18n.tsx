@@ -88,6 +88,8 @@ const translations: Record<string, Record<Lang, string>> = {
   "contact.company": { en: "Company Name", ro: "Numele Companiei" },
   "contact.message": { en: "Your Message", ro: "Mesajul Tău" },
   "contact.send": { en: "Send Message", ro: "Trimite Mesajul" },
+  "contact.success.title": { en: "Thank You!", ro: "Mulțumim!" },
+  "contact.success.desc": { en: "Your request has been received. We will connect with you soon.", ro: "Cererea dvs. a fost primită. Vă vom contacta în curând." },
 
   // Footer
   "footer.rights": { en: "All rights reserved.", ro: "Toate drepturile rezervate." },
